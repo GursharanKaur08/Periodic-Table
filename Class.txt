@@ -1,0 +1,4 @@
+classes Used in this project is:
+
+~   element
+    contained variables for atomic number, atomic name, atomic symbol, type of element and functions to display and write atomic details and return atomic number.
