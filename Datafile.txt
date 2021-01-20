@@ -1,0 +1,7 @@
+Datafiles used in this project are:
+
+~       element.dat                                                     	
+        stores details, i.e. atomic number, atomic symbol, atomic name, type of element of all element
+    
+~       .temp.dat
+	used to delete details of an element.
