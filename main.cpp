@@ -1,3 +1,16 @@
+#include<iostream.h>
+#include<fstream.h>
+#include<conio.h>
+#include<dos.h>
+#include<ctype.h>
+#include<stdio.h>
+#include<process.h>
+
+void start(void);
+void ptable(void);
+void sbn(void);
+void sbs(void);
+
 //**********************************************************
 //           Function to display base border
 //**********************************************************
