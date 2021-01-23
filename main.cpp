@@ -33,29 +33,35 @@ void frame()
 	}
 
 void periodic_table_border()
-	{	 int i,j;
+	{	 
+		int i,j;
  		gotoxy(13,3); cout<<"Ú";
  		gotoxy(49,5); cout<<"Ú";
  		gotoxy(64,3); cout<<"Ú";
  		
 		for(i=5;i<=15;i=i+2)
- 		{	  gotoxy(13,i); cout<<"ÃÄÄÅÄ";
+ 		{	  
+			gotoxy(13,i); cout<<"ÃÄÄÅÄ";
  		}
  
 		for(i=4;i<=16;i=i+2)
- 		{	  gotoxy(13,i); cout<<"³";
+ 		{	  
+			gotoxy(13,i); cout<<"³";
  		}
  
 		for(i=4;i<=16;i=i+2)
- 		{	  gotoxy(64,i); cout<<"³";
+ 		{	  
+			gotoxy(64,i); cout<<"³";
  		}
  		
 		for(i=5;i<=16;i=i+2)
-		 {	  gotoxy(64,i); cout<<"Ã";
+		{	  
+			gotoxy(64,i); cout<<"Ã";
  		}
  		
 		for(i=3;i<=16;i=i+2)
-		 {	  gotoxy(65,i); cout<<"ÄÄ";
+		{	 
+			gotoxy(65,i); cout<<"ÄÄ";
  		}
  	
 		for(i=4;i<=16;i=i+2)
@@ -92,14 +98,16 @@ void periodic_table_border()
  		gotoxy(13,17); cout<<"À";
  		
 		for(i=14;i<=65;i=i+3)
- 		{	 for(j=15;j>=11;j=j-2)
+ 		{	
+			for(j=15;j>=11;j=j-2)
   			{	   
 				gotoxy(i,j); cout<<"ÄÄÅ";
   			}
  		}
 	
  		for(i=49;i<=61;i=i+3)
- 		{	for(j=6;j<=8;j=j+2)
+ 		{	
+			for(j=6;j<=8;j=j+2)
   			{	   	
 				gotoxy(i,j); cout<<"³";
   			}
@@ -114,21 +122,24 @@ void periodic_table_border()
  		}
  
 		for(i=47;i<64;i=i+3)
- 		{	 for(j=11;j<=15;j=j+2)
+ 		{	 
+			for(j=11;j<=15;j=j+2)
   			{	   
 				gotoxy(i,j); cout<<"ÄÄÅ";
   			}
  		}
 		
 		for(i=46;i<=61;i=i+3)
- 		{	 for(j=10;j<=16;j=j+2)
+ 		{	
+			for(j=10;j<=16;j=j+2)
   			{	   
 				gotoxy(i,j); cout<<"³";
   			}
  		}
 		
 		for(i=22;i<47;i=i+3)
- 		{	 for(j=10;j<=16;j=j+2)
+ 		{	 
+			for(j=10;j<=16;j=j+2)
   			{	  
 				gotoxy(i,j); cout<<"³";
   			}
@@ -172,9 +183,10 @@ void periodic_table_border()
 		 gotoxy(61,23); cout<<"Ù";
  
 		for(i=20;i<24;i=i+2)
- 		{	  for(j=19;j<=61;j=j+3)
+ 		{	 
+			for(j=19;j<=61;j=j+3)
   			{	   
-			gotoxy(j,i); cout<<"³";
+				gotoxy(j,i); cout<<"³";
   			}
  		}
 		
