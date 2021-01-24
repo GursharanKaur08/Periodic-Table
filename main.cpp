@@ -356,31 +356,34 @@ void elements()
 //**********************************************************
 
 class element
-	{	 public:
+	{	
+		public:
  		Int atom_no;
  		char symbol[3];
-		 char name[15];
+		char name[15];
  		char type[20];
  
 		void display()
- 		{	  clrscr();
+ 		{	  
+			clrscr();
   			frame();
   			gotoxy(24,10);
   			cout<<"Atomic Number     : "<<atom_no;
   			gotoxy(24,11);
   			cout<<"Symbol            : "<<symbol;
   			gotoxy(24,12);
- 			 cout<<"Name              : "<<name;
+ 			cout<<"Name              : "<<name;
   			gotoxy(24,13);
- 			 cout<<"Type              : "<<type;
+ 			cout<<"Type              : "<<type;
   			gotoxy(24,25);
   			cout<<"  Press any key to return";
  		}
 
 		
  		void getdata()
- 		{        clrscr();
- 			 frame();
+ 		{       
+			clrscr();
+ 			frame();
   			gotoxy(10,10);
   			cout<<"\t\tAtomic Number     : ";
   			cin>>atom_no;
@@ -389,13 +392,14 @@ class element
   			gets(symbol);
   			gotoxy(10,12);
 			cout<<"\t\tName              : ";
-				  gets(name);
- 				 gotoxy(10,13);
-				  cout<<"\t\tType              : ";
-  				gets(type);
- 			}
- 			int returnano()
- 			{	  return atom_no;
- 			}
+			gets(name);
+ 			gotoxy(10,13);
+			cout<<"\t\tType              : ";
+  			gets(type);
+ 		}
+ 		int returnano()
+ 		{	  
+			return atom_no;
+ 		}
 	};	
 
