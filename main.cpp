@@ -14,7 +14,6 @@ void sbs(void);
 //**********************************************************
 //           Function to display base border
 //**********************************************************
-
 void frame()
 	{	 
 		int i,j;
@@ -45,6 +44,9 @@ void frame()
 		}
 	}
 
+//**********************************************************
+//      Function to display periodic table border
+//**********************************************************
 void periodic_table_border()
 	{	 
 		int i,j;
@@ -210,10 +212,10 @@ void periodic_table_border()
  		gotoxy(61,21); cout<<"´";
  		gotoxy(19,21); cout<<"Ã";
 	}
+
 //**********************************************************
 //     Function to display elements in periodic table
 //**********************************************************
-
 void elements()
 {	 
 	gotoxy(2,25); cout<<"Use arrow keys to scroll...Esc to go to previous menu...Enter to view details";
