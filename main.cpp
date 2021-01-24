@@ -351,3 +351,51 @@ void elements()
  	gotoxy(47,16); cout<<" NOT YET DISCOVERED";
 }
 
+//**********************************************************
+//                Class of elements
+//**********************************************************
+
+class element
+	{	 public:
+ 		Int atom_no;
+ 		char symbol[3];
+		 char name[15];
+ 		char type[20];
+ 
+		void display()
+ 		{	  clrscr();
+  			frame();
+  			gotoxy(24,10);
+  			cout<<"Atomic Number     : "<<atom_no;
+  			gotoxy(24,11);
+  			cout<<"Symbol            : "<<symbol;
+  			gotoxy(24,12);
+ 			 cout<<"Name              : "<<name;
+  			gotoxy(24,13);
+ 			 cout<<"Type              : "<<type;
+  			gotoxy(24,25);
+  			cout<<"  Press any key to return";
+ 		}
+
+		
+ 		void getdata()
+ 		{        clrscr();
+ 			 frame();
+  			gotoxy(10,10);
+  			cout<<"\t\tAtomic Number     : ";
+  			cin>>atom_no;
+  			gotoxy(10,11);
+  			cout<<"\t\tSymbol            : ";
+  			gets(symbol);
+  			gotoxy(10,12);
+			cout<<"\t\tName              : ";
+				  gets(name);
+ 				 gotoxy(10,13);
+				  cout<<"\t\tType              : ";
+  				gets(type);
+ 			}
+ 			int returnano()
+ 			{	  return atom_no;
+ 			}
+	};	
+
