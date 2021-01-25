@@ -408,7 +408,8 @@ class element
 //**********************************************************
 
 void write_element()
-	{	 element a;
+	{	
+		element a;
  		ofstream f2;
  		f2.open("element.dat",ios::binary|ios::app);
  		a.getdata();
