@@ -419,10 +419,9 @@ void write_element()
 //**********************************************************
 //   Function to delete an element detail from .dat file
 //**********************************************************
-
-
 void delete_element()
-	{	 element a;
+	{	 
+		element a;
  		ofstream fout;
  		ifstream fin;
  		int n;
@@ -431,11 +430,11 @@ void delete_element()
  		fin.open("element.dat",ios::binary);
  		
 		while(fin.read((char*)&a,sizeof(a)))
- 		{	  if(a.returnano()!=n)
+ 		{	  
+			 if(a.returnano()!=n)
   			 fout.write((char*)&a,sizeof(a));
  		}
- 	
-		fin.close();
+ 		fin.close();
  		fout.close();
  		remove("element.dat");
  		rename("temp.dat","element.dat");
