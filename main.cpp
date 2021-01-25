@@ -401,5 +401,19 @@ class element
  		{	  
 			return atom_no;
  		}
-	};	
+	};
+
+//**********************************************************
+//      Function to write element data in .dat file
+//**********************************************************
+
+void write_element()
+	{	 element a;
+ 		ofstream f2;
+ 		f2.open("element.dat",ios::binary|ios::app);
+ 		a.getdata();
+ 		f2.write((char*)&a,sizeof(a));
+ 		f2.close();
+	}
+
 
