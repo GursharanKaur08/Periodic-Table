@@ -406,7 +406,6 @@ class element
 //**********************************************************
 //      Function to write element data in .dat file
 //**********************************************************
-
 void write_element()
 	{	
 		element a;
@@ -416,5 +415,31 @@ void write_element()
  		f2.write((char*)&a,sizeof(a));
  		f2.close();
 	}
+
+//**********************************************************
+//   Function to delete an element detail from .dat file
+//**********************************************************
+
+
+void delete_element()
+	{	 element a;
+ 		ofstream fout;
+ 		ifstream fin;
+ 		int n;
+ 		cin>>n;
+ 		fout.open("temp.dat",ios::binary);
+ 		fin.open("element.dat",ios::binary);
+ 		
+		while(fin.read((char*)&a,sizeof(a)))
+ 		{	  if(a.returnano()!=n)
+  			 fout.write((char*)&a,sizeof(a));
+ 		}
+ 	
+		fin.close();
+ 		fout.close();
+ 		remove("element.dat");
+ 		rename("temp.dat","element.dat");
+	}
+
 
 
