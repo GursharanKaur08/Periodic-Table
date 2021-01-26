@@ -1,0 +1,17 @@
+ 	void start() – display options how to search
+ 	void ptable() – search by showing periodic table
+ 	void sban() – search by atomic number
+ 	void sbn() – search by atomic name
+ 	void sbs() – search by  atomic symbol
+ 	void frame() – display outer border
+ 	void welcome_screen() – display welcome screen
+ 	void periodic_table_border() – display periodic table border
+ 	void elements() – display elements in periodic table
+ 	void write_elements() – write element details in .dat file
+ 	void delete_elements() – write element details in .dat file
+
+ 	void search_elements(int n) – search element details by number
+ 	void search_elements_sym(char as[]) – search element details by symbol
+ 	void search_elements_nm(char as[]) – search element details by name
+ 	int element_coordinates(int x,int y) – assign atomic number by cursor coordinates
+ 	void control() – control the movement of cursor
