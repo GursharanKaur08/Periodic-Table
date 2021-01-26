@@ -1,5 +1,4 @@
 •	iostream.h
-
     ->	cout
     ->	cin
     
