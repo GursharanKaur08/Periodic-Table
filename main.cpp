@@ -461,9 +461,9 @@ void search_element(int n)
 //**********************************************************
 //   Function to search an element from .dat file by symbol
 //**********************************************************
-
 void search_element_sym(char as[])
-	{	 clrscr();
+	{	 
+		clrscr();
  		element a;
  		ifstream fin;
  		fin.open("element.dat",ios::binary);
@@ -471,62 +471,69 @@ void search_element_sym(char as[])
  		int i,k;
 
 		while(fin.read((char*)&a,sizeof(a)))
- 		{	  int i=0;
-  		do
-  		{
-   		{  if((((a.symbol[i]>64)&&(a.symbol[i]<91))||((a.symbol[i]>96)&&(a.symbol[i]<123)))&&(((a.symbol[i+1]>64)&&(a.symbol[i+1]<91))||((a.symbol[i+1]>96)&&(a.symbol[i+1]<123))))
-			  
-			{	    s[i]=tolower(a.symbol[i]);
-    				   s[i+1]=tolower(a.symbol[i+1]);
-    			}
-    		else
-    		{	    s[i]=tolower(a.symbol[i]);
-   			    s[i+1]='´';
-    		}
-		   }
-  		 {
-  if((((as[i]>64)&&(as[i]<91))||((as[i]>96)&&(as[i]<123)))&&(((as[i+1]>64)&&(as[i+1]<91))||((as[i+1]>96)&&(as[i+1]<123))))
- 
-			   {	     t[i]=tolower(as[i]);
-    			 	    t[i+1]=tolower(as[i+1]);
-    		 	   }
-    		else
-    		{	     t[i]=tolower(as[i]);
-     			     t[i+1]='´';
-   	 	}
-   		}
+ 		{	  
+			int i=0;
+  			do
+  			{
+   				{  if((((a.symbol[i]>64)&&(a.symbol[i]<91))||((a.symbol[i]>96)&&(a.symbol[i]<123)))&&(((a.symbol[i+1]>64)&&(a.symbol[i+1]<91))||((a.symbol[i+1]>96)&&(a.symbol[i+1]<123))))
+			  		{	    
+						s[i]=tolower(a.symbol[i]);
+    				   		s[i+1]=tolower(a.symbol[i+1]);
+    					}
+    				   else
+    				   {	    
+					   s[i]=tolower(a.symbol[i]);
+   			    		   s[i+1]='´';
+    				   }
+		   		}
+  				{  if((((as[i]>64)&&(as[i]<91))||((as[i]>96)&&(as[i]<123)))&&(((as[i+1]>64)&&(as[i+1]<91))||((as[i+1]>96)&&(as[i+1]<123))))
+ 				   {	     
+					     t[i]=tolower(as[i]);
+    			                     t[i+1]=tolower(as[i+1]);
+    			 	   }
+    				   else
+    				   {	     
+					   t[i]=tolower(as[i]);
+     			     		   t[i+1]='´';
+   	 			    }
+   		         	}
   
-		if((s[i]==t[i])&&(s[i+1]==t[i+1]))
-  		{ 	  k=1;
-  			 break;
-  		}
-  		else
-  		{	   k=0;
-   			   i++;
-   			   break;
-  		}
-		 }while(i<3);
+				if((s[i]==t[i])&&(s[i+1]==t[i+1]))
+  				{ 	  
+					k=1;
+  			 		break;
+  				}
+  				else
+  				{	   
+					k=0;
+   			   		i++;
+   			   		break;
+  				}
+		       }
+			while(i<3);	
  
-		if(k==1)
- 		{	  a.display();
-  			  break;
- 		}
-	}
+			if(k==1)
+ 			{	  
+				a.display();
+  			  	break;
+ 			}
+		}
  	
-	if(k==0)
-	{	 clrscr();
- 		frame();
- 		gotoxy(25,10);
- 		cout<<"Sorry ! No element of that symbol exist.";
- 		gotoxy(37,12);
- 		cout<<"Enter again.";
- 		gotoxy(35,14);
- 		cout<<"Redirecting....";
- 		delay(2000);
- 		sbs();
-	}
- 		fin.close();
-		 getch();
+		if(k==0)
+		{	 
+			clrscr();
+ 			frame();
+ 			gotoxy(25,10);
+ 			cout<<"Sorry ! No element of that symbol exist.";
+ 			gotoxy(37,12);
+ 			cout<<"Enter again.";
+ 			gotoxy(35,14);
+ 			cout<<"Redirecting....";
+ 			delay(2000);
+ 			sbs();
+		}
+ 		 	fin.close();
+		 	getch();
 	}	
 
 
