@@ -1,23 +1,30 @@
 •	iostream.h
-	cout
-	cin
+
+    ->	cout
+    ->	cin
+    
 •	fstream.h
-	ofstream
-	ifstream
-	open()
-	close()
-	read()
+    ->	ofstream
+    ->	ifstream
+    ->	open()
+    ->	close()
+    ->	read()
+    
 •	conio.h
-	clrscr()
-	gotoxy()
-	getch()
+    ->	clrscr()
+    ->	gotoxy()
+    ->	getch()
+    
 •	dos.h
-	delay()
+    ->	delay()
+    
 •	ctype.h
-	tolower()
+    ->	tolower()
+    
 •	stdio.h
-	gets()
-	remove()
-	rename()
+    ->	gets()
+    ->	remove()
+    ->	rename()
+    
 •	process.h
-	exit()
+    ->	exit()
