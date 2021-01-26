@@ -440,5 +440,24 @@ void delete_element()
  		rename("temp.dat","element.dat");
 	}
 
+//**********************************************************
+//   Function to search an element detail from .dat file
+//**********************************************************
+
+void search_element(int n)
+	{	 clrscr();
+ 		element a;
+ 		ifstream fin;
+ 		fin.open("element.dat",ios::binary);
+ 
+		while(fin.read((char*)&a,sizeof(a)))
+ 		{	  if(a.returnano()==n)
+  			 a.display();
+ 		}
+ 
+		fin.close();
+	}
+
+
 
 
