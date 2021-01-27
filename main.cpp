@@ -536,6 +536,74 @@ void search_element_sym(char as[])
 		 	getch();
 	}	
 
+//**********************************************************
+//   Function to search an element from .dat file by name
+//**********************************************************
+
+void search_element_nm(char as[])
+	{	 clrscr();
+ 		element a;
+ 		ifstream fin;
+ 		fin.open("element.dat",ios::binary);
+ 		char s[15],t[15];
+ 		int i,k,l=1,m=2;
+ 
+		while(fin.read((char*)&a,sizeof(a)))
+		 {	  int i=0;
+  			  do
+  			{
+   			{
+    if(((a.name[i]>64)&&(a.name[i]<91))||((a.name[i]>96)&&(a.name[i]<123)))
+    s[i]=tolower(a.name[i]);
+    
+				else
+    				{	     l=0;
+     					    k=0;
+    				}
+   			}
+		              {
+    if(((as[i]>64)&&(as[i]<91))||((as[i]>96)&&(as[i]<123)))
+    t[i]=tolower(as[i]);
+    
+				else
+      				 {	     m=0;
+    					     k=0;
+ 					    break;
+   				 }
+			   }
+   			   {	    if(s[i]==t[i])
+ 				    k=1;
+      				   else
+    				{  	    k=0;
+    					   break;
+    				}
+   				i++;
+			   }
+  		}while(i<15);
+  
+if((k==1)||((k==0)&&(l==m)))
+		  {	   a.display();
+   			   k=1;
+   			  break;
+  		}
+ 		}
+ 
+	if(k==0)
+	 {	  clrscr();
+  		frame();
+  		gotoxy(25,10);
+  		cout<<"Sorry ! No element of that name exist.";
+  		gotoxy(37,12);
+  		cout<<"Enter again.";
+  		gotoxy(35,14);
+  		cout<<"Redirecting....";
+  		delay(2000);
+  		sbn();
+ 	}
+
+	 fin.close();
+ 	getch();
+	}
 
 
 
