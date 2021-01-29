@@ -953,4 +953,42 @@ int element_coordinates(int x,int y)
  	return(n);
 	}	
 
+//**********************************************************
+//         Function to search by atomic number
+//**********************************************************
+
+void sban()
+	{	 clrscr();
+ 		frame();
+ 		int ano;
+ 		gotoxy(20,25);
+ 		cout<<"Enter 0 to return to previous menu";
+ 		gotoxy(25,12);
+ 		cout<<"Enter atomic number : ";
+ 		gotoxy(47,12);
+ 		cin>>ano;
+ 		
+		if((ano>0)&&(ano<112))
+ 		{	  search_element(ano);
+  			getch();
+  			sban();
+ 		}
+ 
+		else if(ano==0)
+ 		start();
+ 
+		else if (cin.fail())
+ 		{	  cin.clear();
+  			char junk;
+  			cin>>junk;
+ 			 gotoxy(25,18);
+  			cout<< "No more letters, please!" << endl;
+ 			 delay(800);
+  			sban();
+ 		}
+ 
+		else
+		 sban();
+	}
+
 
