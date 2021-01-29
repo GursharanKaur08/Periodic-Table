@@ -956,9 +956,9 @@ int element_coordinates(int x,int y)
 //**********************************************************
 //         Function to search by atomic number
 //**********************************************************
-
 void sban()
-	{	 clrscr();
+	{	 
+		clrscr();
  		frame();
  		int ano;
  		gotoxy(20,25);
@@ -969,7 +969,8 @@ void sban()
  		cin>>ano;
  		
 		if((ano>0)&&(ano<112))
- 		{	  search_element(ano);
+ 		{
+			search_element(ano);
   			getch();
   			sban();
  		}
@@ -978,17 +979,18 @@ void sban()
  		start();
  
 		else if (cin.fail())
- 		{	  cin.clear();
+ 		{
+			cin.clear();
   			char junk;
   			cin>>junk;
- 			 gotoxy(25,18);
+ 			gotoxy(25,18);
   			cout<< "No more letters, please!" << endl;
- 			 delay(800);
+ 			delay(800);
   			sban();
  		}
  
 		else
-		 sban();
+		sban();
 	}
 
 
