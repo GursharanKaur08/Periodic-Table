@@ -996,10 +996,10 @@ void sban()
 //**********************************************************
 //         Function to search by atomic symbol
 //**********************************************************
-
 void sbs()
-	{	 clrscr();
-		 frame();
+	{	 
+		clrscr();
+		frame();
  		char s[3];
  		gotoxy(20,25);
  		cout<<"Enter 0 to return to previous menu";
@@ -1008,11 +1008,12 @@ void sbs()
  		gets(s);
  		
 		if(s[0]=='0')
-		 start();
+		start();
 
-		 else
-		 {	  search_element_sym(s);
-  			  sbs();
+		else
+		{
+			search_element_sym(s);
+  			sbs();
  		}
 	}
 
