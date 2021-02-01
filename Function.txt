@@ -4,7 +4,7 @@
  
  ~     void ptable() – search by showing periodic table
  
- ~	   void sban() – search by atomic number
+ ~	    void sban() – search by atomic number
  
  ~     void sbn() – search by atomic name
  
