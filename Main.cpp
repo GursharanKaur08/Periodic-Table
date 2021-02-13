@@ -1017,5 +1017,30 @@ void sbs()
  		}
 	}
 
+//**********************************************************
+//         Function to search by atomic name
+//**********************************************************
+
+void sbn()
+	{	 clrscr();
+		 frame();
+		 char s[15];
+		 gotoxy(20,25);
+		 cout<<"Enter 0 to return to previous menu";
+		 gotoxy(25,12);
+		 cout<<"Enter atomic name : ";
+		 gets(s);
+		
+		 if(s[0]=='0')
+		 start();
+		
+		
+
+		 else
+		 {	  search_element_nm(s);
+  			sbn();
+ 		}
+	}
+
 
 
