@@ -1090,5 +1090,51 @@ void control()
 		 ptable();
 	}
 
+//**********************************************************
+//                Function to start program
+//**********************************************************
+
+
+
+
+
+
+void start()
+	{	 clrscr();
+		 char c;
+		 frame();
+		
+		 gotoxy(28,6);
+		 cout<<"How do you want to search  ";
+		 gotoxy(20,14);
+		 cout<<"3. By Atomic Number";
+		 gotoxy(20,12);
+		 cout<<"2. By Atomic Symbol";
+		 gotoxy(20,10);
+		 cout<<"1. By Periodic Table";
+		 gotoxy(20,16);
+		 cout<<"4. By Atomic Name";
+		 gotoxy(20,18);
+		 cout<<"5. Exit";
+		 gotoxy(29,21);
+		 cout<<"Your Choice : ";
+		 c=getch();
+
+		 switch (c)
+		 {	  case '3': sban();
+	    			    break;
+  			
+				case '2': sbs();
+				               break;
+  				case '1': ptable();
+					   break;
+				case '4': sbn();
+					  break;
+				 case '5': exit(1);
+				 default : start();
+	 				   break;
+		 }
+		 getch();
+	}
 
 
