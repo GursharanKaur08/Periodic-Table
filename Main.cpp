@@ -1071,21 +1071,19 @@ void control()
    				gotoxy(--x,y);
   			}
   
-			
-
-
 			else if(g==72)   //for up arrow
-  			{	   if(y==2)
-   				   y=24;
-  				   gotoxy(x,--y);
+  			{	
+				if(y==2)
+   				y=24;
+  				gotoxy(x,--y);
   			}
   
 			else if(g==27)   //for esc key
   			start();
  		}while(g!=13);    //for enter key
- 
+ 	
 	int n;
-	 n=element_coordinates(x,y);
+        n=element_coordinates(x,y);
 
 		 if(n==0)
 		 control();
