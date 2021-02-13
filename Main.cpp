@@ -1043,28 +1043,32 @@ void sbn()
 //**********************************************************
 //               Function to control cursor
 //**********************************************************
-
 int x=2,y=2;
 void control()
-	{	 gotoxy(x,y);
+	{	 
+		gotoxy(x,y);
  		char g;
  		do
- 		{	  g=getch();
-  			 if(g==80)        //for down arrow
-  			{	   if(y==23)
-  				   y=1;
-  				   gotoxy(x,++y);
+ 		{	  
+			g=getch();
+  			if(g==80)        //for down arrow
+  			{	   
+				if(y==23)
+  				y=1;
+  				gotoxy(x,++y);
   			}
   
 			else if(g==77)   //for righr arrow
-  			{	   if(x==79)
-  				   x=1;
-  				   gotoxy(++x,y);
+  			{	
+				if(x==79)
+  				x=1;
+  				gotoxy(++x,y);
   			}
   
 			else if(g==75)   //for left arrow
-  			{	   if(x==2) x=80;
-   				   gotoxy(--x,y);
+  			{	
+				if(x==2) x=80;
+   				gotoxy(--x,y);
   			}
   
 			
