@@ -1116,18 +1116,23 @@ void start()
 		 c=getch();
 
 		 switch (c)
-		 {	  case '3': sban();
-	    			    break;
+		 {	  
+			case '3': sban();
+	    		break;
   			
-				case '2': sbs();
-				               break;
-  				case '1': ptable();
-					   break;
-				case '4': sbn();
-					  break;
-				 case '5': exit(1);
-				 default : start();
-	 				   break;
+			case '2': sbs();
+			break;
+  			
+			case '1': ptable();
+			break;
+			
+			case '4': sbn();
+			break;
+			
+			case '5': exit(1);
+			default : start();
+	 		
+			break;
 		 }
 		 getch();
 	}
