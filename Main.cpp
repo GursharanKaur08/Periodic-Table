@@ -1093,16 +1093,11 @@ void control()
 //**********************************************************
 //                Function to start program
 //**********************************************************
-
-
-
-
-
-
 void start()
-	{	 clrscr();
-		 char c;
-		 frame();
+	{	 
+		clrscr();
+		char c;
+		frame();
 		
 		 gotoxy(28,6);
 		 cout<<"How do you want to search  ";
