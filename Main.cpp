@@ -1093,13 +1093,13 @@ void control()
 //**********************************************************
 //              Function to see periodic table
 //**********************************************************
-
 void ptable()
-	{	 clrscr();
-		 frame();
-		 periodic_table_border();
-		 elements();
-		 control();
+	{	
+		clrscr();
+		frame();
+		periodic_table_border();
+		elements();
+		control();
 	}
 
 
